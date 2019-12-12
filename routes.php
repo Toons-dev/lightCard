@@ -3,15 +3,16 @@
 // Create Router instance
 $router = new Router();
 
-// example.com
+// Home 
 $router->get('', 'PagesController@home');
 
-// example.com/a-propos
-$router->get('explorer', 'PagesController@about');
-// example.com/contact
-$router->get('connexion', 'PagesController@contact');
-// reception des données 
-$router->post('connexion', 'PagesController@contact');
+// Explorer
+$router->get('explorer', 'PagesController@explorer');
+
+// Connexion de l'utilisateur en get
+$router->get('connexion', 'PagesController@connexion');
+// Réception des données en post
+$router->post('connexion', 'PagesController@connexion');
 
 // pages avec parametre 
 $router->get('plateforme/update/{id}', 'PlateformesController@update');

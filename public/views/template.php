@@ -14,7 +14,7 @@
     <body>
         <header>
                 <a href="<?= BASE_URL; ?>">
-                    <img src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
+                    <img class="titreHome" src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
                 </a>
             <div class="menu d-flex justify-content-end">
                 <nav class="navbar navbar-expand-lg">
@@ -62,8 +62,11 @@
         </main>
 
         <footer>
-            <div class="container">
-            <p>LightCards 2019 &copy; </p>
+            <div class="row">
+                <div class="container">
+                    <p>LightCards 2019 &copy; </p>
+                    <p style="color: grey;">All rights reserved</p>
+                </div>
             </div>
         </footer>
         <script src="<?= js_url('jquery-3.4.1.min.js'); ?>"></script>

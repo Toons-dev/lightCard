@@ -8,17 +8,18 @@ class PagesController {
     public function home() {
 
         // données à récuperer de mon model 
-        $data = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro nobis similique sunt nostrum! Assumenda perferendis itaque sint maiores ea totam nobis esse temporibus! Consectetur necessitatibus eligendi consequuntur at eum veritatis?';
+        $data = 'Bienvenue sur la plateforme Lightcards, Développez et partagez vos connaissances en toute simplicité.';
 
         view('pages.home', compact('data'));
     }
 
-    public function about() {
+    public function explorer() {
 
-        view('pages.about');
+
+        view('pages.about');  
     }
 
-    public function contact() {
+    public function connexion() {
 
         $form = new Form($_POST);
 
@@ -48,9 +49,9 @@ class PagesController {
         }
 
         // vue de la page contact 
-        view('pages.contact', compact('formulaireHtml', 'errors', 'formValid'));
+        view('pages.connexion', compact('formulaireHtml', 'errors', 'formValid'));
     }
-    
+    // En cas d'erreur d'url
     public function page404() {
 
         view('pages.404');
