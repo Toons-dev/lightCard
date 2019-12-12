@@ -1,21 +1,40 @@
 body{
+    font-family: 'Roboto Mono', monospace;
     background-color: black;
+    padding: 10px;
 }
 header{
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    position: fixed;
     border-bottom: 1px solid white;
+    background-color: black;
     padding: 10px;
+    z-index: 1;
+}
+.navbar-toggler-icon{
+    color: white;
+}
+main{
+    margin-top: 120px;
+    color: white;
 }
 footer{
     border-top: 1px solid white;
+    background-color: black;
+    color: white;
     padding: 10px;
 }
-.navbutton{
-    margin-left: 30px;
+.astyle{
+    margin-right: 20px;
+    margin-left: 10px;
     color: grey; 
     transition: 0.5s;
 }
-.navbutton:hover{
+.astyle:hover{
     color: white;
     text-decoration: none;
 }
-
+p{
+    font-family: 'Libre Baskerville', serif;
+}
