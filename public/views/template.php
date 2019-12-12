@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="<?= css_url('style.css'); ?>" rel="stylesheet">
     </head>
-    <body style=" padding: 20px;">
+    <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container">    
@@ -23,10 +23,10 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('contact') ?>">Contact</a>
+                                <a class="nav-link" href="<?= url('a-propos') ?>">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('a-propos') ?>">A Propos</a>
+                                <a class="nav-link" href="<?= url('contact') ?>">Connexion</a>
                             </li>
                         </ul>
                     </div>
