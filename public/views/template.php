@@ -13,9 +13,9 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark">
-                <div class="container">    
+                <div class="container">
                     <a class="navbar-brand" href="<?= BASE_URL; ?>">
-                        <img src="<?= img_url('logoBlancLong.png'); ?>" style="width: 130px;" alt="">
+                        <img src="<?= img_url('logoBlacLeft.png'); ?>" style="width: 130px;" alt="">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -23,10 +23,10 @@
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('a-propos') ?>">Home</a>
+                                <a class="navbutton" href="<?= url('explorer') ?>">Explorer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="<?= url('contact') ?>">Connexion</a>
+                                <a class="navbutton" href="<?= url('connexion') ?>">Connexion</a>
                             </li>
                         </ul>
                     </div>
@@ -36,7 +36,7 @@
 
         <main role="main">
         <div class="album py-5">
-            <div class="container" style="color: white">
+            <div class="container" style="color: white;">
                 <?php
                     // contenu de la page
                     echo $content; 
@@ -45,7 +45,7 @@
         </div>
         </main>
 
-        <footer style="background-color: black; color: white;">
+        <footer style="background-color: black;">
             <div class="container">
             <p class="float-right">
                 

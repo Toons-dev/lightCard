@@ -7,11 +7,11 @@ $router = new Router();
 $router->get('', 'PagesController@home');
 
 // example.com/a-propos
-$router->get('a-propos', 'PagesController@about');
+$router->get('explorer', 'PagesController@about');
 // example.com/contact
-$router->get('contact', 'PagesController@contact');
+$router->get('connexion', 'PagesController@contact');
 // reception des données 
-$router->post('contact', 'PagesController@contact');
+$router->post('connexion', 'PagesController@contact');
 
 // pages avec parametre 
 $router->get('plateforme/update/{id}', 'PlateformesController@update');
