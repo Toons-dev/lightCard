@@ -38,3 +38,17 @@ footer{
 p{
     font-family: 'Libre Baskerville', serif;
 }
+.titreHome{
+    animation-duration: 3s;
+    animation-name: lumos;
+    animation-iteration-count: infinite;
+}
+@keyframes lumos {
+    0% { opacity: black; }
+    10% { opacity: grey; }
+    40% { opacity: black; }
+    70% { opacity: white; }
+    80% { opacity: black; }
+    100% { opacity: white; }
+    
+}
