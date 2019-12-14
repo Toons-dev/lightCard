@@ -32,7 +32,7 @@ $router->post('categorie/add', 'categorieController@add');
 
 // pages fiche
 $router->get('fiche', 'ficheController@all');
-$router->get('fiche/update/{id}', '<ficheController@update');
+$router->get('fiche/update/{id}','<ficheController@update');
 $router->post('fiche/update/{id}', 'ficheController@update');
 
 // ajout d'une nouvelle fiche
