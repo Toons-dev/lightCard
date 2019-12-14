@@ -14,9 +14,6 @@ $router->get('connexion', 'PagesController@connexion');
 // Réception des données en post
 $router->post('connexion', 'PagesController@connexion');
 
-
-
-
 //Momo
 // déconnexion utilisateur 
 $router->get('logout', 'PagesController@logout');
