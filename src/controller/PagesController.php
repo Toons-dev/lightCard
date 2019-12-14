@@ -14,9 +14,10 @@ class PagesController {
     }
 
     public function explorer() {
+        $fiches = Fiche::findAll();
 
 
-        view('pages.about');  
+        view('pages.about', compact('fiches'));  
     }
 
     public function connexion() {

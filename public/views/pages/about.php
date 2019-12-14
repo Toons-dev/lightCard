@@ -1,10 +1,20 @@
 <?php ob_start(); ?>
 
-<h1>Bienvenue !</h1>
+<h1>Toutes nos lightCards, à portée de clic.</h1>
 
-<p>
-    A propos
-</p>
+    <div class="row">
+    <?php foreach($fiches as $fiche): ?>
+        <div class="fiche">
+            <h1><?= $fiche[f_titre] ?></h1>
+            <p><?= $fiche[f_categorie] ?></p>
+            <p><?= $fiche[f_texte] ?></p>
+            <p><?= $fiche[f_date] ?></p>
+            <p><?= $fiche[f_link] ?></p>
+        </div>
+    <?php endforeach; ?>
+    </div>
+
+
 
 
 <?php $content = ob_get_clean() ?> 

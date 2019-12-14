@@ -4,7 +4,7 @@
  * Nous allons utiliser des méthodes issues de Db, nous disons que Article
  * est une classe enfant, elle hérite de la classe Db 
  */
-class Exemple extends Db {
+class Fiche extends Db {
 
     /**
      * Proprietés 
@@ -15,8 +15,8 @@ class Exemple extends Db {
      * Constantes
      * Nous pouvons aussi définir des constantes. Ici, il s'agit du nom de la table. Ainsi, s'il venait à changer, nous n'aurons plus qu'à le changer à cet endroit.
      */
-    const TABLE_NAME = "exemple";
-    const PRIMARY_KEY = "e_id";
+    const TABLE_NAME = "fiche";
+    const PRIMARY_KEY = "f_id";
 
     /**
      * Méthodes magiques
