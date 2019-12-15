@@ -1,15 +1,21 @@
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: black;
+    padding: 10px;
 }
 header{
     font-family: 'Roboto Mono', monospace;
     width: 100%;
+    top: 0px;
     position: fixed;
     border-bottom: 1px solid white;
     background-color: black;
     padding: 10px;
     z-index: 1;
+}
+h1{
+    margin-bottom: 100px;
+    font-weight: bold;
 }
 .navbar-toggler-icon{
     color: white;
@@ -38,16 +44,26 @@ p{
     font-family: 'Libre Baskerville', serif;
 }
 .titreHome{
-    animation-duration: 3s;
+    animation-duration: 10s;
     animation-name: lumos;
     animation-iteration-count: infinite;
 }
 @keyframes lumos {
-    0% { opacity: black; }
-    10% { opacity: grey; }
-    40% { opacity: black; }
-    70% { opacity: white; }
-    80% { opacity: black; }
-    100% { opacity: white; }
-    
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    40% { opacity: 0; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fiche{
+    padding: 20px;
+    border: 1px solid white;
+    transition: 0.2s;
+    color: grey;
+}
+.fiche:hover{
+    color: rgb(255, 255, 255);
 }

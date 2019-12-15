@@ -29,15 +29,18 @@
                                 <a class="astyle nav-link" href="<?= url('explorer') ?>">Explorer<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                            <a class="astyle nav-link" href="<?= url('connexion') ?>">Connexion</a>
+                                <a class="astyle nav-link" href="<?= url('connexion') ?>">Connexion</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="astyle nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégorie</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="astyle dropdown-item" href="#">Action</a>
-                                    <a class="astyle dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                    <a class="astyle dropdown-item" href="#">Something else here</a>
+                                <div class="dropdown-menu" style="background-color: black; border:1px solid white;" aria-labelledby="navbarDropdown">
+                                    <?php 
+                                    $categories = Categorie::findAll();
+                                    foreach($categories as $categorie): ?>
+                                    <a class="dropdown-item" style="color:grey;" href="#"><?= $categorie['cat_name'] ?></a>
+                                    <?php endforeach; ?>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Toutes les catégories</a>
                                 </div>
                             </li>
                         </ul>

@@ -12,3 +12,5 @@ const CLASSES_SOURCES = [
     'config',
     'src/model',
 ];
+
+?>

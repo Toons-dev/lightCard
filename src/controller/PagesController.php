@@ -9,14 +9,12 @@ class PagesController {
 
         // données à récuperer de mon model 
         $data = 'Bienvenue sur la plateforme Lightcards, Développez et partagez vos connaissances en toute simplicité.';
-
         view('pages.home', compact('data'));
     }
 
     public function explorer() {
         $fiches = Fiche::findAll();
-
-
+        
         view('pages.about', compact('fiches'));  
     }
 
