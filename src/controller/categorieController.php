@@ -9,9 +9,10 @@
         }
 
         public function one($id) {
-
+            // appel à la BDD
             $categorie = categorie::findOne();
-            view('categorie.one');
+            
+            view('categorie.one', compact('categorie'));
         }
 
     }
