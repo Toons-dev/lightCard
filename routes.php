@@ -28,7 +28,7 @@ $router->get('categorie/add', 'categorieController@add');
 $router->post('categorie/add', 'categorieController@add');
 
 // pages fiche
-$router->get('fiche', 'ficheController@all');
+$router->get('fiche/{id}', 'ficheController@one');
 $router->get('fiche/update/{id}','<ficheController@update');
 $router->post('fiche/update/{id}', 'ficheController@update');
 

@@ -12,6 +12,7 @@
                     <p><?= resume($fiche['f_texte']) ?></p>
                     <p><?= $fiche['f_date'] ?></p>
                     <p><?= $fiche['f_link'] ?></p>
+                    <a href="<?= url('fiche/'.$fiche['f_id']) ?>">Découvrir</a>
                 </div>
         </div>
     <?php endforeach; ?>
