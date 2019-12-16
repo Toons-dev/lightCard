@@ -4,15 +4,16 @@
 
 class PagesController {
 
-    /* Page d'acceuil  */ 
+    // Page d'acceuil lightCards  */ 
     public function home() {
 
-        // données à récuperer de mon model 
+        // J'envoie la variable data à mon model
         $data = 'Bienvenue sur la plateforme Lightcards, Développez et partagez vos connaissances en toute simplicité.';
         view('pages.home', compact('data'));
     }
-
+    // Page d'exploration random
     public function explorer() {
+        // J'affiche 9 fiches au hasard
         $fiches = Fiche::findAll();
         
         view('pages.about', compact('fiches'));  

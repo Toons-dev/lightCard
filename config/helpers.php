@@ -78,3 +78,12 @@ function view($path, $vars = null, $include = true) {
     return $fullUrl;
 
 }
+
+function resume($string, $max = 250) {
+
+    if(strlen($string) <= $max) {
+        return $string;
+    } else {
+        return substr($string, 0, $max).'...';
+    }
+} 
