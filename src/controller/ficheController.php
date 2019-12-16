@@ -1,16 +1,9 @@
 <?php 
-    class ExempleController {
+    class FicheController {
 
-        public function all() {
-            // appel a la BDD 
-            $genres = Genre::findAll();
-
-            view('exemple.all', compact('genres'));
-        }
-
-        public function show($id) {
-            
-            view('exemple.all');
+        public function one($id) {
+            $fiche = fiche::findOne($id);
+            view('fiche.allByid', compact('fiche'));
         }
 
     }
