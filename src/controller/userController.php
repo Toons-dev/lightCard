@@ -25,7 +25,7 @@
 
                 $userExist = Controle::findOneByMail($_POST['email']);
                 // Enregistrement des données
-                if($_POST['password'] == $_POST['password2'] && !isset($userExist)) {
+                if($_POST['password'] == $_POST['password2'] && $userExist == NULL) {
 
                     Controle::save([
                         'usr_lastname' => $_POST['nom'],
@@ -33,11 +33,9 @@
                         'usr_email' => $_POST['email'],
                         'usr_password' => $_POST['password']
                                     ]);
-                } else {
-                    $errors = 'mauvais mot de passe';
+                    redirectTo('login');
                 }
                 
-    
             } else {
                 // affichage des erreurs 
                 $errors =  $form->displayErrors();
@@ -93,7 +91,38 @@
                 redirectTo('');
             }
 
-            view('user.userHome');
+            $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_firstname']);
+            $categories = Categorie::findAll(); 
+
+            $NewCard = new Form($_POST);
+    
+            $NewCard->input('text', 'titre', 'Titre')->required()
+                ->input('select', 'categorie', $categories)->required()
+                ->input('textarea', 'texte', 'Texte')->required()
+                ->input('text', 'link', 'Link')
+                ->input('file', 'media', 'Photo')->required()
+                ->submit('enregistrer');
+                
+    
+            $formulaireHtml = $NewCard->getForm();
+    
+            $formValid  = false;
+            $errors     = false; 
+    
+            // si le formulaire est validé 
+            if($data = $NewCard->valid()){
+    
+                // formulaire valide
+                $formValid = true;
+
+                // Enregistrement des données
+
+                } else {
+                // affichage des erreurs 
+                $errors =  $NewCard->displayErrors();
+            }
+    
+            view('user.userHome', compact('formulaireHtml', 'errors', 'formValid', 'fiches'));
         }
 
     }

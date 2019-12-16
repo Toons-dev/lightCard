@@ -14,7 +14,7 @@ header{
     z-index: 1;
 }
 h1{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     font-weight: bold;
 }
 .navbar-toggler-icon{
@@ -71,18 +71,18 @@ img{
     margin-bottom: 20px;
 }
 .lien{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid rgba(160, 133, 21, 0.392); 
-    color: grey;
+    color: rgba(160, 133, 21, 0.392); 
     transition: 0.5s;
 }
 .lien:hover{
-    margin-bottom: 20px;
-    margin-top: 20px;
-    border: 1px solid rgba(242, 214, 102, 0.995); 
-    color: white;
+    color: rgba(242, 214, 102, 0.995);
     text-decoration: none;
-    box-shadow: 2px 2px 5px white;
+}
+.connect{
+    transition: 0.5s;
+    color: rgba(30, 147, 40, 0.392); 
+}
+.connect:hover{
+    color: rgba(62, 213, 80, 0.995);
+    text-decoration: none;
 }

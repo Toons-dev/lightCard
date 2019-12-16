@@ -100,7 +100,7 @@ class Controle extends Db {
         ]);
 
         // je retourne la liste d'articles
-        $usermail = $query->fetch(PDO::FETCH_ASSOC);
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
     public static function connect($email, $password) {

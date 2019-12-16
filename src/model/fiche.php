@@ -102,5 +102,21 @@ class Fiche extends Db {
         return $query->fetchAll(PDO::FETCH_ASSOC);       
     }
 
+    public static function findAllByUserId($id) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                            FROM fiche WHERE f_usr_id = :id');
+        // je l'execute 
+        $query->execute([
+            'id' => $id
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
 
 } 

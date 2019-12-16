@@ -6,7 +6,7 @@ class Db {
     private const DB_PORT = '3306';
     private const DB_NAME = 'lightcard';
     private const DB_USER = 'root';
-    private const DB_PWD  = '';
+    private const DB_PWD  = 'root';
 
     public function __construct() { 
 

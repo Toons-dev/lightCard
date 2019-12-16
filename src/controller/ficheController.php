@@ -5,5 +5,5 @@
             $fiche = fiche::findOne($id);
             view('fiche.allByid', compact('fiche'));
         }
-
+        
     }

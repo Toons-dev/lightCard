@@ -13,9 +13,14 @@
     </head>
     <body>
         <header>
-                <a href="<?= BASE_URL; ?>">
-                    <img class="titreHome" src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
-                </a>
+                <div style="padding-right: 30px; padding-left: 10px;" class="row justify-content-between">
+                    <a href="<?= BASE_URL; ?>">
+                        <img class="titreHome" src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
+                    </a>
+                    <?php if(isset($_SESSION['usr_connexion'])): ?>
+                    <a class="connect" href="<?= url('logout') ?>">Me déconnecter</a>
+                    <?php endif; ?>
+                </div>
             <div class="menu d-flex justify-content-end">
                 <nav class="navbar navbar-expand-lg">
 
@@ -66,9 +71,15 @@
 
         <footer>
             <div class="row">
-                <div class="container">
-                    <p>LightCards 2019 &copy; </p>
-                    <p style="color: grey;">All rights reserved</p>
+                <div class="col-12 col-md-5">
+                    <h6>LightCards 2019 &copy; </h6>
+                    <h6 style="color: grey">All rights reserved</h6>
+                </div>
+                <div class="col-12 col-md-7">
+                    <h6>Suivez-nous sur les réseaux sociaux</h6>
+                    <a class="lien" href="https://www.facebook.com/">Facebook</a>
+                    <a class="lien" href="https://www.behance.net/">Behance</a>
+                    <a class="lien" href="https://www.instagram.com/?hl=fr">Instagram</a>
                 </div>
             </div>
         </footer>

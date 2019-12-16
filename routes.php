@@ -3,51 +3,49 @@
 // Create Router instance
 $router = new Router();
 
-// Home 
+                                            // PAGES-CONTROLLER
+// Home, slogan de présentation
 $router->get('', 'PagesController@home');
-// Explorer
+// Explorer, présentation de plusieurs cards de manière random
 $router->get('explorer', 'PagesController@explorer');
 
 
-// Connexion de l'utilisateur en get
+                                            // USER-CONTROLLER-CREATION
+// Création d'un utilisateur en get
 $router->get('connexion', 'userController@connexion');
 // Réception des données en post
 $router->post('connexion', 'userController@connexion');
+
+
+                                            // USER-CONTROLLER-CONNEXION
 // Connexion de l'utilisateur en get
 $router->get('login', 'userController@login');
-// Connexion de l'utilisateur en get
+// Réception des données en post
 $router->post('login', 'userController@login');
+// Page home d'un utilisateur connecté
 $router->get('userhome', 'userController@home');
+// Réception des données du créateur de fiches en post
+$router->post('userhome', 'userController@home');
+// Déconnexion dé l'utilisateur 
 $router->get('logout', 'userController@logOut');
 
 
-// déconnexion utilisateur 
-$router->get('logout', 'PagesController@logout');
-
-// pages Categorie
+                                            // CATEGORIE-CONTROLLER
+// Affichage de toutes les catégories
 $router->get('categories', 'categorieController@all');
+// Affichage d'un seule catégorie par id
 $router->get('categorie/{id}', 'categorieController@one');
-$router->get('categorie/update/{id}', 'categorieController@update');
-$router->post('categorie/update/{id}', 'categorieController@update');
 
-// ajout d'une nouvelle categorie
-$router->get('categorie/add', 'categorieController@add');
-$router->post('categorie/add', 'categorieController@add');
 
-// pages fiche
+                                            // FICHE-CONTROLLER
+// Affichage d'une seule fiche
 $router->get('fiche/{id}', 'ficheController@one');
-$router->get('fiche/update/{id}','<ficheController@update');
-$router->post('fiche/update/{id}', 'ficheController@update');
+// Affichage des fiches d'un utilisateur
+$router->get('fiche/usr/{id}', 'ficheController@usrFiche');
 
-// ajout d'une nouvelle fiche
-$router->get('fiche/add', 'ficheController@add');
-$router->post('fiche/add', 'ficheController@add');
 
-// pages avec parametre 
-$router->get('plateforme/update/{id}', 'PlateformesController@update');
-
+                                            // OTHER-CONTROLLER
 // page 404
 $router->set404('PagesController@page404');
-
 // Run the routes
 $router->run();
