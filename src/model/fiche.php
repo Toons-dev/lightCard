@@ -86,5 +86,21 @@ class Fiche extends Db {
 
     }
 
+    public static function findAllById($id) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                            FROM fiche WHERE f_cat_id = :id');
+
+        // je l'execute 
+        $query->execute([
+            'id' => $id
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetchAll(PDO::FETCH_ASSOC);       
+    }
+
 
 } 

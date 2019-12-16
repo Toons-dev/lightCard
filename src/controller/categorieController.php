@@ -3,15 +3,17 @@
 
         public function all() {
             // appel a la BDD 
-            $categories = categorie::findAll();
+            $categories = Categorie::findAll();
 
             view('categorie.all', compact('genres'));
         }
 
         public function one($id) {
 
-            $categorie = categorie::findOne();
-            view('categorie.one');
+            // appel à la BDD
+            $categorie = Categorie::findOne($id);
+            $fiches = Fiche::findAllById($id);
+            view('categorie.one', compact('categorie', 'fiches'));
         }
 
     }
