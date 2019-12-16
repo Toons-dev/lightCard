@@ -9,7 +9,7 @@
                 <div class="text">
                     <h2><?= $fiche[f_titre] ?></h2>
                     <p><?= $fiche[f_categorie] ?></p>
-                    <p><?= $fiche[f_texte] ?></p>
+                    <p><?= resume($fiche[f_texte]) ?></p>
                     <p><?= $fiche[f_date] ?></p>
                     <p><?= $fiche[f_link] ?></p>
                 </div>

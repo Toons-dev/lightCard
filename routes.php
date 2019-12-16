@@ -14,12 +14,12 @@ $router->get('connexion', 'PagesController@connexion');
 // Réception des données en post
 $router->post('connexion', 'PagesController@connexion');
 
-//Momo
 // déconnexion utilisateur 
 $router->get('logout', 'PagesController@logout');
 
 // pages Categorie
-$router->get('categorie', 'categorieController@all');
+$router->get('categories', 'categorieController@all');
+$router->get('categorie/{id}', 'categorieController@one');
 $router->get('categorie/update/{id}', 'categorieController@update');
 $router->post('categorie/update/{id}', 'categorieController@update');
 
@@ -35,19 +35,6 @@ $router->post('fiche/update/{id}', 'ficheController@update');
 // ajout d'une nouvelle fiche
 $router->get('fiche/add', 'ficheController@add');
 $router->post('fiche/add', 'ficheController@add');
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // pages avec parametre 
 $router->get('plateforme/update/{id}', 'PlateformesController@update');

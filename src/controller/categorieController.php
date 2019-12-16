@@ -1,16 +1,17 @@
 <?php 
-    class ExempleController {
+    class categorieController {
 
         public function all() {
             // appel a la BDD 
-            $genres = Genre::findAll();
+            $categories = categorie::findAll();
 
-            view('exemple.all', compact('genres'));
+            view('categorie.all', compact('genres'));
         }
 
-        public function show($id) {
-            
-            view('exemple.all');
+        public function one($id) {
+
+            $categorie = categorie::findOne();
+            view('categorie.one');
         }
 
     }
