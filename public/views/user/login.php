@@ -1,7 +1,7 @@
 <?php ob_start(); ?>
 <div class="row">
-    <div class="col-12 col-md-6">
-    <h1>Vous n'avez pas de compte ?</h1>
+    <div class="col-8">
+    <h1>Connectez vous à votre espace</h1>
         <?php if (!$formValid): ?>
         <?= $errors; ?>
         <!-- formulaire -->
@@ -11,11 +11,6 @@
         <p>Votre demande à bien été prise en compte.</p>
         <?php endif; ?>
     </div>
-
-        <div style="height: 500px;" class="row align-items-center justify-content-center col-12 col-md-6 ">
-                <h2>Biensûr que si ! <br><br> <a class="lien" href="<?= url('login') ?>"> Connectez vous </a></h2>
-        </div>
-
 </div>
 
 

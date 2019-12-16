@@ -1,5 +1,5 @@
 <?php 
-    class ExempleController {
+    class adminController {
 
         public function all() {
             // appel a la BDD 

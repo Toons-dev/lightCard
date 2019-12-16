@@ -67,3 +67,22 @@ p{
 .fiche:hover{
     color: rgb(255, 255, 255);
 }
+img{
+    margin-bottom: 20px;
+}
+.lien{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid rgba(160, 133, 21, 0.392); 
+    color: grey;
+    transition: 0.5s;
+}
+.lien:hover{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border: 1px solid rgba(242, 214, 102, 0.995); 
+    color: white;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px white;
+}

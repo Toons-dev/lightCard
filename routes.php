@@ -5,14 +5,21 @@ $router = new Router();
 
 // Home 
 $router->get('', 'PagesController@home');
-
 // Explorer
 $router->get('explorer', 'PagesController@explorer');
 
+
 // Connexion de l'utilisateur en get
-$router->get('connexion', 'PagesController@connexion');
+$router->get('connexion', 'userController@connexion');
 // Réception des données en post
-$router->post('connexion', 'PagesController@connexion');
+$router->post('connexion', 'userController@connexion');
+// Connexion de l'utilisateur en get
+$router->get('login', 'userController@login');
+// Connexion de l'utilisateur en get
+$router->post('login', 'userController@login');
+$router->get('userhome', 'userController@home');
+$router->get('logout', 'userController@logOut');
+
 
 // déconnexion utilisateur 
 $router->get('logout', 'PagesController@logout');

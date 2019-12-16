@@ -76,7 +76,7 @@ class Form {
        
         $this->htmlForm .= '<div class="form-group row">'.
                             '<label class="col-sm-2 col-form-label" for="d">'.$label.'</label>'.
-                            '<div class="col-sm-10"><input type="text" class="form-control" placeholder="'.$label.'" name="'.$name.'" value="'.$this->getPostValue($name).'"></div>'.
+                            '<div class="offset-1 col-sm-8"><input type="text" class="form-control" placeholder="'.$label.'" name="'.$name.'" value="'.$this->getPostValue($name).'"></div>'.
                         '</div>';
     }
 
@@ -85,7 +85,7 @@ class Form {
 
         $this->htmlForm .= '<div class="form-group row">'.
                             '<label class="col-sm-2 col-form-label" for="d">'.$label.'</label>'.
-                            '<div class="col-sm-10"><input type="password" class="form-control" placeholder="'.$label.'" name="'.$name.'" value="'.$this->getPostValue($name).'"></div>'.
+                            '<div class="offset-1 col-sm-8"><input type="password" class="form-control" placeholder="'.$label.'" name="'.$name.'" value="'.$this->getPostValue($name).'"></div>'.
                         '</div>';
     }
 
@@ -94,7 +94,7 @@ class Form {
 
         $this->htmlForm .= '<div class="form-group row">'.
                             '<label class="col-sm-2 col-form-label" for="d">'.$label.'</label>'.
-                            '<div class="col-sm-10"><textarea class="form-control" name="'.$name.'" cols="40" rows="3" >'.$this->getPostValue($name).'</textarea></div>'.
+                            '<div class="offset-1 col-sm-8"><textarea class="form-control" name="'.$name.'" cols="40" rows="3" >'.$this->getPostValue($name).'</textarea></div>'.
                         '</div>';
     }
 
@@ -103,7 +103,7 @@ class Form {
 
         $this->htmlForm .= '<div class="form-group row">'.
                             '<label class="col-sm-2 col-form-label" for="d">'.$label.'</label>'.
-                            '<div class="col-sm-10">'.
+                            '<div class="offset-1 col-sm-8">'.
                                 '<select class="form-control" name="'.$name.'" >';
 
                                 foreach ($values as $key => $value) {
@@ -125,7 +125,7 @@ class Form {
         $this->htmlForm .= '<fieldset class="form-group">
                                 <div class="row">
                                 <legend class="col-form-label col-sm-2 pt-0">'.$label.'</legend>
-                                <div class="col-sm-10">';
+                                <div class="offset-1 col-sm-8">';
                                 $i = 1;
                                 foreach ($values as $key => $value) {
 
@@ -159,7 +159,7 @@ class Form {
         $this->htmlForm .= '<fieldset class="form-group">
                                 <div class="row">
                                 <legend class="col-form-label col-sm-2 pt-0">'.$label.'</legend>
-                                <div class="col-sm-10">';
+                                <div class="offset-1 col-sm-8">';
                                 $i = 1;
                                 foreach ($values as $key => $value) {
 
@@ -193,7 +193,7 @@ class Form {
        
         $this->htmlForm .= '<div class="form-group row">'.
                                 '<label class="col-sm-2 col-form-label" for="d">'.$label.'</label>'.
-                                '<div class="col-sm-10">
+                                '<div class="offset-1 col-sm-8">
                                     <div class="custom-file">
                                         <input type="file"  name="'.$name.'" class="custom-file-input" id="'.$name.'">
                                         <label class="custom-file-label" for="'.$name.'">Selectionner un fichier...</label>
