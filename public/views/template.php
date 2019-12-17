@@ -18,9 +18,7 @@
                     <a href="<?= BASE_URL; ?>">
                         <img class="titreHome" src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
                     </a>
-                    <?php if(isset($_SESSION['usr_connexion'])): ?>
-                    <a class="connect" href="<?= url('logout') ?>">Me déconnecter</a>
-                    <?php endif; ?>
+                    
                 </div>
             <div class="menu d-flex justify-content-end">
                 <nav class="navbar navbar-expand-lg">
@@ -54,6 +52,10 @@
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                         </form>
+                        <?php if(isset($_SESSION['usr_connexion'])): ?>
+                            <a class="connect" href="<?= url('userhome') ?>">Compte</a>
+                            <a class="connect" href="<?= url('logout') ?>">Me Déconnecter</a>
+                        <?php endif; ?>
                     </div>
                 </nav>
             </div>
