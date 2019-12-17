@@ -7,7 +7,7 @@ ob_start(); ?>
 <div class="row">
     <?php foreach($fiches as $fiche): ?>
         <div class="col-12 col-md-6 col-lg-4 fiche">
-            <img src="<?= $fiche['f_media'] ?>" alt="" style="width: 100%;">
+            <a href="<?= url('fiche/'.$fiche['f_id']) ?>"> <img src="<?= $fiche['f_media'] ?>" alt="" style="width: 100%;"> </a>
                 <div class="text">
                     <h2><?= $fiche['f_titre'] ?></h2>
                     <p><?= $fiche['f_categorie'] ?></p>

@@ -18,7 +18,6 @@
                     <a href="<?= BASE_URL; ?>">
                         <img class="titreHome" src="<?= img_url('logoBlancLong.png'); ?>" style="width: 140px;" alt="Logo LightCards">
                     </a>
-                    
                 </div>
             <div class="menu d-flex justify-content-end">
                 <nav class="navbar navbar-expand-lg">
