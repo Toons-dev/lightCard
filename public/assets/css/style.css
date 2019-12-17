@@ -64,12 +64,14 @@ p{
 /* Design s'appliquant à toutes les fiches */
 .fiche{
     padding: 20px;
-    border: 1px solid white;
-    transition: 0.2s;
+    border: 1px solid grey;
+    transition: 2s;
     color: grey;
 }
 .fiche:hover{
+    box-shadow:inset 5px 5px 10px rgba(231, 247, 11, 0.2);
     color: rgb(255, 255, 255);
+    border: 1px solid rgb(231, 247, 11);
 }
 /* S'applique aux images pour améliorer leur lisibilité */
 img{
