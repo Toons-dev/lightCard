@@ -33,7 +33,7 @@
                                 <a class="astyle nav-link" href="<?= url('explorer') ?>">Explorer<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="astyle nav-link" href="<?= url('connexion') ?>">Connexion</a>
+                                <a class="astyle nav-link" href="<?= url('connexion') ?>">Inscription</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="astyle nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégorie</a>
@@ -55,6 +55,8 @@
                         <?php if(isset($_SESSION['usr_connexion'])): ?>
                             <a class="connect" href="<?= url('userhome') ?>">Compte</a>
                             <a class="connect" href="<?= url('logout') ?>">Me Déconnecter</a>
+                        <?php else : ?>
+                            <a class="connect" href="<?= url('login') ?>">Connexion</a> 
                         <?php endif; ?>
                     </div>
                 </nav>
