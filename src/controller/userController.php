@@ -92,6 +92,7 @@
             }
 
             $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_firstname']);
+            var_dump($fiches);
             $fichesLike = fiche::findAllLike();
             $categories = Categorie::findAll(); 
 

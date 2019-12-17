@@ -13,7 +13,7 @@ ob_start(); ?>
                 <p><?= $fiche['f_categorie'] ?></p>
                 <p><?= $fiche['f_texte'] ?></p>
                 <p><?= $fiche['f_date'] ?></p>
-                <p><?= $fiche['f_link'] ?></p>
+                <p><?= resume($fiche['f_link'], 50) ?></p>
             </div>
 
 

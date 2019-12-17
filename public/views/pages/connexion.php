@@ -4,7 +4,7 @@ ob_start(); ?>
 
 <div class="row">
     <div class="col-12 col-md-6">
-    <h1>Vous n'avez pas de compte ?</h1>
+    <h1>Créez votre compte</h1>
         <?php if (!$formValid): ?>
         <?= $errors; ?>
         
@@ -16,7 +16,7 @@ ob_start(); ?>
     </div>
 
         <div style="height: 500px;" class="row align-items-center justify-content-center col-12 col-md-6 ">
-                <h2>Biensûr que si ! <br><br> <a class="lien" href="<?= url('login') ?>"> Connectez vous </a></h2>
+                <h2 style="text-align: center;">Si vous avez déjà un compte, <a class="lien" href="<?= url('login') ?>">connectez vous.</a>
         </div>
 
 </div>

@@ -13,7 +13,7 @@ ob_start(); ?>
                     <p><?= $fiche['f_categorie'] ?></p>
                     <p><?= resume($fiche['f_texte']) ?></p>
                     <p><?= $fiche['f_date'] ?></p>
-                    <p><?= $fiche['f_link'] ?></p>
+                    <p><?= resume($fiche['f_link'], 20) ?></p>
                     <a class="lien" href="<?= url('fiche/'.$fiche['f_id']) ?>">Découvrir</a>
                 </div>
         </div>
