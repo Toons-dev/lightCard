@@ -91,8 +91,7 @@
                 redirectTo('');
             }
 
-            $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_firstname']);
-            var_dump($fiches);
+            $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_id']);
             $fichesLike = fiche::findAllLike();
             $categories = Categorie::findAll(); 
 
