@@ -69,13 +69,25 @@ h2{
 .fiche{
     padding: 20px;
     border: 1px solid grey;
-    transition: 2s;
+    transition: 1s;
     color: grey;
 }
 .fiche:hover{
     box-shadow:inset 5px 5px 10px rgba(231, 247, 11, 0.2);
     color: rgb(255, 255, 255);
     border: 1px solid rgb(231, 247, 11);
+}
+/* Design s'appliquant à toutes les une fois connecté */
+.ficheUser{
+    padding: 20px;
+    border: 1px solid grey; 
+    transition: 1s;
+    color: grey; 
+}
+.ficheUser:hover{
+    box-shadow:inset 5px 5px 10px rgba(172, 52, 128, 0.331);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgba(172, 52, 128, 0.995);
 }
 /* S'applique aux images pour améliorer leur lisibilité */
 img{

@@ -6,10 +6,10 @@ ob_start(); ?>
     </div>
     
     <?php if(isset($fiches)): ?>
-    <h2>Vous pouvez gérer vos propres fiches</h2>
+    <h2>Vous pouvez gérer vos publications</h2>
     <div class="row">
         <?php foreach($fiches as $fiche): ?>
-            <div class="col-12 col-md-6 col-lg-2 fiche">
+            <div class="col-12 col-md-6 col-lg-2 ficheUser">
                     <div class="text">
                         <h6><?= resume($fiche['f_titre'], 30) ?></h6>
                         <p><?= $fiche['cat_name'] ?></p>
@@ -22,8 +22,8 @@ ob_start(); ?>
     </div>
     <?php endif; ?>
 
-    <h2>Créer une nouvelle fiche</h2>
-    <div class="row fiche">
+    <h2>Créer une nouvelle lightCards</h2>
+    <div class="row ficheUser">
         <?php if (!$formValid): ?>
         <?= $errors; ?>
         <!-- formulaire -->
@@ -34,8 +34,8 @@ ob_start(); ?>
         <?php endif; ?>
     </div>
 
-    <h2>Ou organiser vos fiches préférées</h2>
-    <div class="fiche">
+    <h2>Ou organiser vos cards préférées</h2>
+    <div class="ficheUser">
         
     </div>
     

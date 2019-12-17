@@ -204,7 +204,7 @@ class Form {
 
     // set submit button 
     public function submit($value) {
-        $this->htmlForm .= '<div><button type="submit" class="btn btn-primary mb-2">'.$value.'</button></div>';
+        $this->htmlForm .= '<div><button type="submit" class="lien bg-transparent mb-2">'.$value.'</button></div>';
     }
 
     // affichage du rendu HTML du formulaire

@@ -5,7 +5,7 @@
             // appel a la BDD 
             $categories = Categorie::findAll();
 
-            view('categorie.all', compact('genres'));
+            view('categorie.all', compact('categories'));
         }
 
         public function one($id) {

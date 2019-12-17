@@ -46,7 +46,7 @@
                                     <a class="dropdown-item" style="color:grey;" href="<?= url('categorie/'.$categorie['cat_id']) ?>"><?= $categorie['cat_name'] ?></a>
                                     <?php endforeach; ?>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Toutes les catégories</a>
+                                    <a class="dropdown-item" href="<?= url('categories') ?>">Toutes les catégories</a>
                                 </div>
                             </li>
                         </ul>

@@ -109,6 +109,26 @@ class Fiche extends Db {
 
     }
 
+    public static function findOther($cat) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                            FROM fiche 
+                            INNER JOIN categorie ON cat_id = f_cat_id
+                            WHERE f_cat_id = :cat
+                            ORDER BY RAND()
+                            LIMIT 2 ');
+
+        // je l'execute 
+        $query->execute([
+            'cat' => $cat
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetchAll(PDO::FETCH_ASSOC);  
+    }
+
     public static function findAllById($id) {
 
         $bdd = Db::getDb();
