@@ -69,6 +69,25 @@ class Fiche extends Db {
         return $query->fetchAll(PDO::FETCH_ASSOC);       
     }
 
+    public static function showRandom() {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                                FROM '. self::TABLE_NAME.'
+                                ORDER BY RAND()
+                                LIMIT 9 ');
+
+        // je l'execute 
+        $query->execute();
+
+        // je retourne la liste d'articles
+        return $query->fetchAll(PDO::FETCH_ASSOC);       
+    }
+
+
+
+
     public static function findOne(int $id) {
 
         $bdd = Db::getDb();
