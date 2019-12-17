@@ -59,7 +59,8 @@ class Fiche extends Db {
         $bdd = Db::getDb();
 
         $query = $bdd->prepare('SELECT *
-                            FROM '. self::TABLE_NAME);
+                                FROM '. self::TABLE_NAME.'
+                                INNER JOIN categorie ON cat_id = f_cat_id' );
 
         // je l'execute 
         $query->execute();
@@ -73,7 +74,8 @@ class Fiche extends Db {
         $bdd = Db::getDb();
 
         $query = $bdd->prepare('SELECT *
-                            FROM '. self::TABLE_NAME .' 
+                            FROM '. self::TABLE_NAME .'
+                            INNER JOIN categorie ON cat_id = f_cat_id  
                             WHERE '.self::PRIMARY_KEY.' = :id');
 
         // je l'execute 
@@ -91,7 +93,9 @@ class Fiche extends Db {
         $bdd = Db::getDb();
 
         $query = $bdd->prepare('SELECT *
-                            FROM fiche WHERE f_cat_id = :id');
+                            FROM fiche 
+                            INNER JOIN categorie ON cat_id = f_cat_id
+                            WHERE f_cat_id = :id');
 
         // je l'execute 
         $query->execute([
@@ -107,7 +111,9 @@ class Fiche extends Db {
         $bdd = Db::getDb();
 
         $query = $bdd->prepare('SELECT *
-                            FROM fiche WHERE f_usr_id = :id');
+                            FROM fiche 
+                            INNER JOIN categorie ON cat_id = f_cat_id
+                            WHERE f_usr_id = :id');
         // je l'execute 
         $query->execute([
             'id' => $id
@@ -129,6 +135,22 @@ class Fiche extends Db {
 
         // je retourne la liste d'articles
         return $query->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+    public static function convertId($id) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT cat_name
+                                FROM categorie WHERE cat_id = :id');
+        // je l'execute 
+        $query->execute([
+            'id' => $id
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetch(PDO::FETCH_ASSOC);
 
     }
 

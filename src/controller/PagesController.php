@@ -15,6 +15,8 @@ class PagesController {
     public function explorer() {
         // J'affiche 9 fiches au hasard
         $fiches = Fiche::findAll();
+        $categorieName = Fiche::convertId($fiche['f_cat_id']);
+        var_dump($categorieName);
         view('pages.about', compact('fiches'));  
     }
 
