@@ -1,3 +1,4 @@
+<?php // Page de template, mise en place des header, nav, footer ?>
 <!doctype html>
 <html lang="fr">
     <head>

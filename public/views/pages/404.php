@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php 
+// Page 404 en cas d'url incomplet ou inconnu
+ob_start(); ?>
 
 <h1>Page 404</h1>
 

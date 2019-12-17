@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php 
+// Une fois connecté, l'utilisateur a ici accès à son espace personel
+ob_start(); ?>
     <div>
         <h1>Bonjour <?= $_SESSION['usr_connexion']['usr_firstname'] ?>,</h1>
     </div>

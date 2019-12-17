@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php
+// Page de présentation de toutes les catégories
+ob_start(); ?>
 
 <h1>Bienvenue !</h1>
 

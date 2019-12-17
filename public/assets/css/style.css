@@ -1,3 +1,4 @@
+/* Styles de bases pour la mise en place du template */
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: black;
@@ -30,6 +31,7 @@ footer{
     color: white;
     padding: 10px;
 }
+/* Liens présents dans la nav */
 .astyle{
     margin-right: 20px;
     margin-left: 10px;
@@ -40,9 +42,11 @@ footer{
     color: white;
     text-decoration: none;
 }
+/* Font diférente pour la lecture des textes*/
 p{
     font-family: 'Libre Baskerville', serif;
 }
+/* Animation présente dans le logo de la navigation */
 .titreHome{
     animation-duration: 10s;
     animation-name: lumos;
@@ -57,7 +61,7 @@ p{
     90% { opacity: 1; }
     100% { opacity: 0; }
 }
-
+/* Design s'appliquant à toutes les fiches */
 .fiche{
     padding: 20px;
     border: 1px solid white;
@@ -67,9 +71,11 @@ p{
 .fiche:hover{
     color: rgb(255, 255, 255);
 }
+/* S'applique aux images pour améliorer leur lisibilité */
 img{
     margin-bottom: 20px;
 }
+/* S'applique aux liens non présents de la nav */
 .lien{
     color: rgba(160, 133, 21, 0.392); 
     transition: 0.5s;
@@ -78,6 +84,7 @@ img{
     color: rgba(242, 214, 102, 0.995);
     text-decoration: none;
 }
+/* S'applique au lien de déconnection */
 .connect{
     transition: 0.5s;
     color: rgba(30, 147, 40, 0.392); 

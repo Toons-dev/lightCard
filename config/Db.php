@@ -79,12 +79,12 @@ class Db {
 
         return $delete;
     }
-
+    //Création d'un fonction permettant le changement de statut d'une fiche; LIKE / DISLIKE
     protected static function dbUpdateStatus($id) {
 
         $bdd = self::getDb();
 
-        // Construction de la requête au format : INSERT INTO $table($data.keys) VALUES(:$data.keys) 
+        // Update de la fiche par son id récupéré dans l'url 
         $req  = 'UPDATE fiche
                 SET f_status = 1
                 WHERE f_id = :id';

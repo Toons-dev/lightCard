@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php 
+// Page de présentation de toutes les lightcards selon l'id
+ob_start(); ?>
 
         <div class="row col-12 fiche">
 

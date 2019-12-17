@@ -1,4 +1,6 @@
-<?php ob_start(); ?>
+<?php 
+// Page d'affichage d'une catégorie selon son ID
+ob_start(); ?>
 
 <h1><?= $categorie['cat_name'] ?></h1>
 

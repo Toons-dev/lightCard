@@ -1,5 +1,7 @@
 <?php $title = 'Accueil'; ?>
-<?php ob_start(); ?>
+<?php 
+// Page d'accueil du site, slogan. 
+ob_start(); ?>
 
 <h1 style="margin-bottom: 150px;"><?= $data ?></h1>
 

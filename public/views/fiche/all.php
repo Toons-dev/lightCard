@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php 
+// Page de présentation de toutes les lightCards
+ob_start(); 
+?>
 
 <h1>Bienvenue !</h1>
 

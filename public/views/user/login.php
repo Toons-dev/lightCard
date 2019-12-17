@@ -1,4 +1,7 @@
-<?php ob_start(); ?>
+<?php 
+// Une fois créer, l'utilisateur peut se connecter ici
+ob_start(); 
+?>
 <div class="row">
     <div class="col-8">
     <h1>Connectez vous à votre espace</h1>
