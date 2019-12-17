@@ -86,10 +86,13 @@ img{
 }
 /* S'applique au lien de déconnection */
 .connect{
+    padding-left: 20px;
+    padding-left: 20px;
+    
     transition: 0.5s;
-    color: rgba(30, 147, 40, 0.392); 
+    color: rgba(172, 116, 170, 0.961); 
 }
 .connect:hover{
-    color: rgba(62, 213, 80, 0.995);
+    color: rgba(172, 52, 128, 0.995);
     text-decoration: none;
 }
