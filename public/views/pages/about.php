@@ -8,7 +8,7 @@
             <a href="<?= url('fiche/'.$fiche['f_id']) ?>" ><img src="<?= $fiche['f_media'] ?>" alt="" style="width: 100%;"></a>
                 <div class="text">
                     <h2><?= $fiche['f_titre'] ?></h2>
-                    <p><?= $fiche['f_categorie'] ?></p>
+                    <p><?= $fiche['cat_name'] ?></p>
                     <p><?= resume($fiche['f_texte']) ?></p>
                     <p><?= $fiche['f_date'] ?></p>
                     <p><?= resume($fiche['f_link'], 20); ?></p>

@@ -93,16 +93,16 @@
 
             $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_id']);
             $fichesLike = fiche::findAllLike();
-            $categories = Categorie::findAll(); 
+            $categories = Categorie::getAllSelect(); 
 
 
             $NewCard = new Form($_POST);
     
             $NewCard->input('text', 'titre', 'Titre')->required()
-                ->input('select', 'categorie', $categories)->required()
+                ->input('select', 'categorie', 'Catégories', $categories)->required()
                 ->input('textarea', 'texte', 'Texte')->required()
                 ->input('text', 'link', 'Link')
-                ->input('file', 'media', 'Photo')->required()
+                ->input('text', 'media', 'Photo')->required()
                 ->submit('enregistrer');
                 
     
@@ -118,6 +118,16 @@
                 $formValid = true;
 
                 // Enregistrement des données
+                Fiche::save([
+                    "f_titre" => $_POST['titre'],
+                    "f_cat_id" => $_POST['categorie'],
+                    "f_texte" => $_POST['texte'],
+                    "f_link" => $_POST['link'],
+                    "f_media" => $_POST['media'],
+                    "f_usr_id" => $_SESSION['usr_connexion']['usr_id']
+                ]);
+
+                redirectTo('userhome');
 
                 } else {
                 // affichage des erreurs 

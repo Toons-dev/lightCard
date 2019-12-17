@@ -12,7 +12,7 @@ ob_start(); ?>
             <div class="col-12 col-md-6 col-lg-2 fiche">
                     <div class="text">
                         <h6><?= resume($fiche['f_titre'], 30) ?></h6>
-                        <p><?= $fiche['f_categorie'] ?></p>
+                        <p><?= $fiche['cat_name'] ?></p>
                         <p><?= $fiche['f_date'] ?></p>
                         <a class="lien" href="<?= url('fiche/'.$fiche['f_id']) ?>">Aperçu</a>
                         <a class="lien" href="<?= url('fiche/delete'.$fiche['f_id']) ?>">Supprimer</a>
@@ -23,7 +23,7 @@ ob_start(); ?>
     <?php endif; ?>
 
     <h2>Créer une nouvelle fiche</h2>
-    <div class="fiche">
+    <div class="row fiche">
         <?php if (!$formValid): ?>
         <?= $errors; ?>
         <!-- formulaire -->

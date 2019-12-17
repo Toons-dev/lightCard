@@ -8,9 +8,4 @@
             view('exemple.all', compact('genres'));
         }
 
-        public function show($id) {
-            
-            view('exemple.all');
-        }
-
     }

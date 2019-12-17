@@ -86,4 +86,5 @@ function resume($string, $max = 250) {
     } else {
         return substr($string, 0, $max).'...';
     }
+
 } 

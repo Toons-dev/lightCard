@@ -10,7 +10,7 @@ ob_start(); ?>
             
             <div class="col-12 col-md-6 text">
                 <h2><?= $fiche['f_titre'] ?></h2>
-                <p><?= $fiche['f_categorie'] ?></p>
+                <p><?= $fiche['cat_name'] ?></p>
                 <p><?= $fiche['f_texte'] ?></p>
                 <p><?= $fiche['f_date'] ?></p>
                 <p><?= resume($fiche['f_link'], 50) ?></p>
