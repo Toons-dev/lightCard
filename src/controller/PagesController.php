@@ -14,7 +14,7 @@ class PagesController {
     // Page d'exploration random
     public function explorer() {
         // J'affiche 9 fiches au hasard
-        $fiches = Fiche::findAll();
+        $fiches = Fiche::showRandom();
         view('pages.about', compact('fiches'));  
     }
 

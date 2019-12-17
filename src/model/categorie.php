@@ -86,5 +86,19 @@ class Categorie extends Db {
 
     }
 
+    public static function getAllSelect() {
+
+        $genres = self::findAll();
+
+        $genreSelect = [];
+        foreach ($genres as $value) {
+            $genreSelect[$value['cat_id']] = $value['cat_name'];
+        }
+
+        // je retourne la liste d'articles
+        return $genreSelect;
+
+    }
+
 
 } 

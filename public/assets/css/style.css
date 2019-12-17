@@ -46,6 +46,10 @@ footer{
 p{
     font-family: 'Libre Baskerville', serif;
 }
+h2{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 /* Animation présente dans le logo de la navigation */
 .titreHome{
     animation-duration: 10s;
