@@ -10,6 +10,11 @@ $router->get('', 'PagesController@home');
 $router->get('explorer', 'PagesController@explorer');
 
 
+                                            // SEARCH-CONTROLLER
+// Home, slogan de présentation
+$router->get('search', 'searchController@search');
+
+
                                             // USER-CONTROLLER-CREATION
 // Création d'un utilisateur en get
 $router->get('connexion', 'userController@connexion');

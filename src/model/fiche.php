@@ -131,6 +131,24 @@ class Fiche extends Db {
         return $query->fetchAll(PDO::FETCH_ASSOC);
 
     }
-
+  
+    function getTitreByName($titre){
+        
+        $db = Db::getDb();
+    
+        $query = $db->prepare('SELECT * 
+                                FROM fiche
+                                INNER JOIN categorie ON fiche.f_cat_id = categorie.cat_id
+                                WHERE f_titre LIKE :titre ');
+    
+        $query->execute([
+            'titre' => $titre.'%'
+        ]);
+    
+        $fiche = $query->fetchAll(PDO::FETCH_ASSOC);
+    
+        return $fiche;
+    }
+    
 
 } 
