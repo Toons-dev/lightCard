@@ -92,7 +92,9 @@
             }
 
             $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_firstname']);
+            $fichesLike = fiche::findAllLike();
             $categories = Categorie::findAll(); 
+
 
             $NewCard = new Form($_POST);
     

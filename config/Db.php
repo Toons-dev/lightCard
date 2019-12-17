@@ -80,6 +80,24 @@ class Db {
         return $delete;
     }
 
+    protected static function dbUpdateStatus($id) {
+
+        $bdd = self::getDb();
+
+        // Construction de la requête au format : INSERT INTO $table($data.keys) VALUES(:$data.keys) 
+        $req  = 'UPDATE fiche
+                SET f_status = 1
+                WHERE f_id = :id';
+
+        $response = $bdd->prepare($req);
+
+        $update = $response->execute([
+            'id' => $id
+        ]);
+
+        return $update;
+    }
+
 
     /**
      * Permet de mettre à jour (UPDATE) des données en base de données.

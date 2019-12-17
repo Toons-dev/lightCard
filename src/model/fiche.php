@@ -118,5 +118,19 @@ class Fiche extends Db {
 
     }
 
+    public static function findAllLike() {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                            FROM fiche WHERE f_statut = 1');
+        // je l'execute 
+        $query->execute();
+
+        // je retourne la liste d'articles
+        return $query->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
 
 } 

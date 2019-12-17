@@ -1,5 +1,5 @@
 <?php ob_start(); ?>
-    <div class="row justify-content-between">
+    <div>
         <h1>Bonjour <?= $_SESSION['usr_connexion']['usr_firstname'] ?>,</h1>
     </div>
     
@@ -32,7 +32,7 @@
         <?php endif; ?>
     </div>
 
-    <h2>Ou gérer vos fiches préférées</h2>
+    <h2>Ou organiser vos fiches préférées</h2>
     <div class="fiche">
         
     </div>
