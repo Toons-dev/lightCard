@@ -75,8 +75,10 @@ class Fiche extends Db {
 
         $query = $bdd->prepare('SELECT *
                                 FROM '. self::TABLE_NAME.'
+                                INNER JOIN categorie ON cat_id = f_cat_id 
                                 ORDER BY RAND()
                                 LIMIT 9 ');
+
 
         // je l'execute 
         $query->execute();
