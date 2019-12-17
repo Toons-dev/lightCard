@@ -83,6 +83,7 @@
                     <a class="lien" href="https://www.facebook.com/">Facebook</a>
                     <a class="lien" href="https://www.behance.net/">Behance</a>
                     <a class="lien" href="https://www.instagram.com/?hl=fr">Instagram</a>
+                    <a class="lien" href="https://www.twitter.com/">Twitter</a>
                 </div>
             </div>
         </footer>
