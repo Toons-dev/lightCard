@@ -32,9 +32,12 @@
                             <li class="nav-item active">
                                 <a class="astyle nav-link" href="<?= url('explorer') ?>">Explorer<span class="sr-only">(current)</span></a>
                             </li>
+                            <?php if(!isset($_SESSION['usr_connexion'])):  ?>
                             <li class="nav-item">
                                 <a class="astyle nav-link" href="<?= url('connexion') ?>">Inscription</a>
                             </li>
+                            <?php endif; ?>
+
                             <li class="nav-item dropdown">
                                 <a class="astyle nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catégorie</a>
                                 <div class="dropdown-menu" style="background-color: black; border:1px solid white;" aria-labelledby="navbarDropdown">
