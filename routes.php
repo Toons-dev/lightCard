@@ -14,13 +14,11 @@ $router->get('explorer', 'PagesController@explorer');
 // Home, slogan de présentation
 $router->get('search', 'searchController@search');
 
-
                                             // USER-CONTROLLER-CREATION
 // Création d'un utilisateur en get
 $router->get('connexion', 'userController@connexion');
 // Réception des données en post
 $router->post('connexion', 'userController@connexion');
-
 
                                             // USER-CONTROLLER-CONNEXION
 // Connexion de l'utilisateur en get
@@ -42,11 +40,13 @@ $router->get('categories', 'categorieController@all');
 $router->get('categorie/{id}', 'categorieController@one');
 
 
-                                            // FICHE-CONTROLLER
-// Affichage d'une seule fiche
-$router->get('fiche/{id}', 'ficheController@one');
+// FICHE-CONTROLLER
 // Affichage des fiches d'un utilisateur
 $router->get('fiche/usr/{id}', 'ficheController@usrFiche');
+$router->get('fiche/delete/{id}', 'ficheController@deleteFiche');
+
+// Affichage d'une seule fiche
+$router->get('fiche/{id}', 'ficheController@one');
 
 
                                             // OTHER-CONTROLLER
