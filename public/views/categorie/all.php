@@ -10,7 +10,6 @@ ob_start(); ?>
                 <a href="<?= url('categorie/'.$categorie['cat_id']) ?>"> <img src="<?= $categorie['cat_media'] ?>" alt="" style="width: 100%;"></a>
                     <div class="text">
                         <h2><?= $categorie['cat_name'] ?></h2>
-                        
                         <a class="lien" href="<?= url('categorie/'.$categorie['cat_id']) ?>">Découvrir</a>
                     </div>
             </div>

@@ -4,7 +4,7 @@
  * Nous allons utiliser des méthodes issues de Db, nous disons que Article
  * est une classe enfant, elle hérite de la classe Db 
  */
-class Fiche extends Db {
+class Like extends Db {
 
     /**
      * Proprietés 
@@ -15,8 +15,8 @@ class Fiche extends Db {
      * Constantes
      * Nous pouvons aussi définir des constantes. Ici, il s'agit du nom de la table. Ainsi, s'il venait à changer, nous n'aurons plus qu'à le changer à cet endroit.
      */
-    const TABLE_NAME = "fiche";
-    const PRIMARY_KEY = "f_id";
+    const TABLE_NAME = "jaime";
+    const PRIMARY_KEY = "like_id";
 
     /**
      * Méthodes magiques
@@ -54,13 +54,6 @@ class Fiche extends Db {
         return 'La fiche a été supprimée';
     }
 
-    public static function dislike($id) {
-
-        Db::dbDelete('jaime', ['like_id' => $id ]);
-        
-        return 'La fiche a été retirée';
-    }
-
     public static function findAll() {
 
         $bdd = Db::getDb();
@@ -74,46 +67,6 @@ class Fiche extends Db {
 
         // je retourne la liste d'articles
         return $query->fetchAll(PDO::FETCH_ASSOC);       
-    }
-
-    public static function showRandom() {
-
-        $bdd = Db::getDb();
-
-        $query = $bdd->prepare('SELECT *
-                                FROM '. self::TABLE_NAME.'
-                                INNER JOIN categorie ON cat_id = f_cat_id 
-                                ORDER BY RAND()
-                                LIMIT 9 ');
-
-
-        // je l'execute 
-        $query->execute();
-
-        // je retourne la liste d'articles
-        return $query->fetchAll(PDO::FETCH_ASSOC);       
-    }
-
-
-
-
-    public static function findOne(int $id) {
-
-        $bdd = Db::getDb();
-
-        $query = $bdd->prepare('SELECT *
-                            FROM '. self::TABLE_NAME .'
-                            INNER JOIN categorie ON cat_id = f_cat_id  
-                            WHERE '.self::PRIMARY_KEY.' = :id');
-
-        // je l'execute 
-        $query->execute([
-            'id' => $id
-        ]);
-
-        // je retourne la liste d'articles
-        return $query->fetch(PDO::FETCH_ASSOC);
-
     }
 
     public static function findOther($cat) {
@@ -136,55 +89,15 @@ class Fiche extends Db {
         return $query->fetchAll(PDO::FETCH_ASSOC);  
     }
 
-    public static function findAllById($id) {
+
+    public static function findAllLike() {
 
         $bdd = Db::getDb();
 
         $query = $bdd->prepare('SELECT *
-                            FROM fiche 
-                            INNER JOIN categorie ON cat_id = f_cat_id
-                            WHERE f_cat_id = :id');
-
+                            FROM fiche WHERE f_statut = 1');
         // je l'execute 
-        $query->execute([
-            'id' => $id
-        ]);
-
-        // je retourne la liste d'articles
-        return $query->fetchAll(PDO::FETCH_ASSOC);       
-    }
-
-    public static function findAllByUserId($id) {
-
-        $bdd = Db::getDb();
-
-        $query = $bdd->prepare('SELECT *
-                            FROM fiche 
-                            INNER JOIN categorie ON cat_id = f_cat_id
-                            WHERE f_usr_id = :id');
-        // je l'execute 
-        $query->execute([
-            'id' => $id
-        ]);
-
-        // je retourne la liste d'articles
-        return $query->fetchAll(PDO::FETCH_ASSOC);
-
-    }
-
-    public static function findAllLike($id) {
-
-        $bdd = Db::getDb();
-
-        $query = $bdd->prepare('SELECT *
-                                FROM jaime AS J
-                                INNER JOIN fiche AS F ON F.f_id = J.f_id
-                                INNER JOIN user AS U ON U.usr_id = J.usr_id
-                                WHERE J.usr_id = :id');
-        // je l'execute 
-        $query->execute([
-            'id' => $id
-        ]);
+        $query->execute();
 
         // je retourne la liste d'articles
         return $query->fetchAll(PDO::FETCH_ASSOC);

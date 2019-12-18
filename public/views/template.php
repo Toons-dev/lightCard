@@ -51,8 +51,8 @@
                             </li>
                         </ul>
                         <form action="<?= url('search') ?>" method="get" class="form-inline my-2 my-lg-0">
-                            <input name="search" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                            <input name="search" class="form-control mr-sm-2" type="search" placeholder="Une idée" aria-label="Search">
+                            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Rechercher</button>
                         </form>
                         <?php if(isset($_SESSION['usr_connexion'])): ?>
                             <a class="connect" href="<?= url('userhome') ?>">Compte</a>
@@ -80,7 +80,7 @@
             <div class="row">
                 <div class="col-12 col-md-5">
                     <h6>LightCards 2019 &copy; </h6>
-                    <h6 style="color: grey">All rights reserved</h6>
+                    <h6 style="color: grey">Tous droits réservés</h6>
                 </div>
                 <div class="col-12 col-md-7">
                     <h6>Suivez-nous sur les réseaux sociaux</h6>

@@ -15,4 +15,10 @@
             redirectTo('userhome');
         }
 
+        public function dislikeFiche($id) {
+
+            Fiche::dislike($id);
+            redirectTo('userhome');
+        }
+
     }

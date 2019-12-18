@@ -12,7 +12,10 @@ ob_start(); ?>
                 <p><?= $fiche['cat_name'] ?></p>
                 <p><?= $fiche['f_texte'] ?></p>
                 <p><?= $fiche['f_date'] ?></p>
-                <p><?= resume($fiche['f_link'], 50) ?></p>
+                <a class="lienExt" href="<?= $fiche['f_link'] ?>"><?= resume($fiche['f_link'], 20) ?></a><br>
+                <?php if(isset($_SESSION['usr_connexion'])): ?>
+                    <a class="lienFav" href="<?= url('like/'.$fiche['f_id']) ?>">Ajouter aux favoris</a>
+                <?php endif; ?>
             </div>
         </div>
 

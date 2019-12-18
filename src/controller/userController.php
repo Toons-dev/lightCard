@@ -91,23 +91,23 @@
                 redirectTo('');
             }
             
-                $supression = '';
+            $supression = '';
+
             if(isset($_SESSION['delete'])) {
                 $supression = 'La fiche a bien été supprimée.';
                 unset($_SESSION['delete']);
             }
 
             $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_id']);
-            $fichesLike = fiche::findAllLike();
+            $fichesLike = fiche::findAllLike($_SESSION['usr_connexion']['usr_id']);
             $categories = Categorie::getAllSelect(); 
-
 
             $NewCard = new Form($_POST);
     
             $NewCard->input('text', 'titre', 'Titre')->required()
                 ->input('select', 'categorie', 'Catégories', $categories)->required()
                 ->input('textarea', 'texte', 'Texte')->required()
-                ->input('text', 'link', 'Link')
+                ->input('text', 'link', 'Lien')
                 ->input('text', 'media', 'Photo')->required()
                 ->submit('enregistrer');
                 
@@ -140,7 +140,7 @@
                 $errors =  $NewCard->displayErrors();
             }
             
-            view('user.userHome', compact('formulaireHtml', 'errors', 'formValid', 'fiches', 'supression'));
+            view('user.userHome', compact('formulaireHtml', 'errors', 'formValid', 'fiches', 'supression', 'fichesLike'));
         }
 
     }

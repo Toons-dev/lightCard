@@ -79,6 +79,20 @@ class Db {
 
         return $delete;
     }
+
+    protected static function dbdislike($table, $data) {
+
+        $bdd = self::getDb();
+
+        // Construction de la requête au format : INSERT INTO $table($data.keys) VALUES(:$data.keys) 
+        $req  = "DELETE * FROM " . $table . " WHERE like_id = :".$data;
+
+        $response = $bdd->prepare($req);
+
+        $delete = $response->execute($data);
+
+        return $delete;
+    }
     //Création d'un fonction permettant le changement de statut d'une fiche; LIKE / DISLIKE
     protected static function dbUpdateStatus($id) {
 

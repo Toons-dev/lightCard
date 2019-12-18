@@ -11,8 +11,11 @@
                     <p><?= $fiche['cat_name'] ?></p>
                     <p><?= resume($fiche['f_texte']) ?></p>
                     <p><?= $fiche['f_date'] ?></p>
-                    <p><?= resume($fiche['f_link'], 20); ?></p>
-                    <a class="lien" href="<?= url('fiche/'.$fiche['f_id']) ?>">Découvrir</a>
+                    <a class="lienExt" href="<?= $fiche['f_link'] ?>"><?= resume($fiche['f_link'], 20) ?></a><br>
+                    <a class="lien" href="<?= url('fiche/'.$fiche['f_id']) ?>">Découvrir</a><br>
+                    <?php if(isset($_SESSION['usr_connexion'])): ?>
+                        <a class="lienFav" href="<?= url('like/'.$fiche['f_id']) ?>">Favoris</a>
+                    <?php endif; ?>
                 </div>
         </div>
     <?php endforeach; ?>
