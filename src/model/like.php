@@ -139,5 +139,37 @@ class Like extends Db {
 
     }
 
+    public static function noDoubleLike($idf, $idusr) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                                FROM jaime WHERE usr_id = :idusr AND f_id = :id_f');
+        // je l'execute 
+        $query->execute([
+            'id_f' => $idf,
+            'idusr' => $idusr
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetchall(PDO::FETCH_ASSOC);
+
+    }
+
+    public static function countLike($id) {
+
+        $bdd = Db::getDb();
+
+        $query = $bdd->prepare('SELECT *
+                                FROM jaime WHERE f_id = :idf');
+        // je l'execute 
+        $query->execute([
+            'idf' => $id,
+        ]);
+
+        // je retourne la liste d'articles
+        return $query->fetchall(PDO::FETCH_ASSOC);
+
+    }
 
 } 

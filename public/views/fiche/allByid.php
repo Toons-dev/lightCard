@@ -16,6 +16,8 @@ ob_start(); ?>
                 <?php if(isset($_SESSION['usr_connexion'])): ?>
                     <a class="lienFav" href="<?= url('like/'.$fiche['f_id']) ?>">Ajouter aux favoris</a>
                 <?php endif; ?>
+                <br><br>
+                <h4><?= $lik ?> J'aime<?= ($lik > 1) ? 's' : ''; ?></h4>
             </div>
         </div>
 
