@@ -11,7 +11,8 @@ ob_start();
         <?= $formulaireHtml; ?>
 
         <?php else: ?>
-        <p>Votre demande à bien été prise en compte.</p>
+        <p>Le couple email / mot de passe est incorrect, recommencez ou veillez d'abord à vous inscrire.</p>
+        <a class="lien" href="<?= url('connexion') ?>">Inscrivez vous ici</a>
         <?php endif; ?>
     </div>
 </div>

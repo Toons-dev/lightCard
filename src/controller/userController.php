@@ -51,7 +51,7 @@
     
             $form1->input('text', "email", "E-mail")->required()
                 ->input('password', "password", "Password")->required()
-                ->submit('enregistrer');
+                ->submit('se connecter');
     
             $formulaireHtml = $form1->getForm();
     

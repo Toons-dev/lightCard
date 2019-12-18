@@ -11,7 +11,8 @@ ob_start(); ?>
         <?= $formulaireHtml; ?>
 
         <?php else: ?>
-        <p>Votre demande à bien été prise en compte.</p>
+        <p>Votre compte n'a pas été créé.</p>
+        <a class="lien" href="<?= url('connexion') ?>">Enregistrez-vous ici</a>
         <?php endif; ?>
     </div>
 
