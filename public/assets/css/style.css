@@ -42,6 +42,9 @@ footer{
     color: white;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+}
 /* Font diférente pour la lecture des textes*/
 p{
     font-family: 'Libre Baskerville', serif;
@@ -103,11 +106,37 @@ img{
     color: rgba(242, 214, 102, 0.995);
     text-decoration: none;
 }
+/* S'applique aux liens externe */
+.lienExt{
+    color: rgba(9, 13, 123, 0.913); 
+    transition: 0.5s;
+}
+.lienExt:hover{
+    color: rgba(102, 118, 242, 0.995);
+    text-decoration: none;
+}
+/* S'applique aux liens externe */
+.lienFav{
+    color: rgba(14, 94, 33, 0.913); 
+    transition: 0.5s;
+}
+.lienFav:hover{
+    color: rgba(40, 171, 92, 0.995);
+    text-decoration: none;
+}
+/* S'applique aux liens nde suppression */
+.delete{
+    color: rgba(123, 27, 68, 0.523); 
+    transition: 0.5s;
+}
+.delete:hover{
+    color: rgba(250, 66, 46, 0.995);
+    text-decoration: none;
+}
 /* S'applique au lien de déconnection */
 .connect{
     padding-left: 20px;
     padding-right: 20px;
-    
     transition: 0.5s;
     color: rgba(172, 116, 170, 0.961); 
 }

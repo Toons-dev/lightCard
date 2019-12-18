@@ -44,13 +44,18 @@ $router->get('categorie/{id}', 'categorieController@one');
 // Affichage des fiches d'un utilisateur
 $router->get('fiche/usr/{id}', 'ficheController@usrFiche');
 $router->get('fiche/delete/{id}', 'ficheController@deleteFiche');
+$router->get('fiche/dislike/{id}', 'ficheController@dislikeFiche');
 
 // Affichage d'une seule fiche
 $router->get('fiche/{id}', 'ficheController@one');
 
+                                             // LIKE-CONTROLLER
+// page 404
+$router->get('like/{id}', 'JaimeController@Jaime');
 
                                             // OTHER-CONTROLLER
 // page 404
 $router->set404('PagesController@page404');
 // Run the routes
 $router->run();
+

@@ -12,7 +12,7 @@ ob_start(); ?>
 
         <?php else: ?>
         <p>Votre compte n'a pas été créé.</p>
-        <a class="lien" href="<?= url('connexion') ?>">Enregistrez-vous ici</a>
+        <a class="connect" href="<?= url('connexion') ?>">Enregistrez-vous ici</a>
         <?php endif; ?>
     </div>
 

@@ -12,7 +12,7 @@ ob_start();
 
         <?php else: ?>
         <p>Le couple email / mot de passe est incorrect, recommencez ou veillez d'abord à vous inscrire.</p>
-        <a class="lien" href="<?= url('connexion') ?>">Inscrivez vous ici</a>
+        <a class="connect" href="<?= url('connexion') ?>">Inscrivez vous ici</a>
         <?php endif; ?>
     </div>
 </div>
