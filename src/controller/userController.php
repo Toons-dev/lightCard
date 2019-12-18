@@ -90,6 +90,12 @@
             if(!isset($_SESSION['usr_connexion'])){
                 redirectTo('');
             }
+            
+                $supression = '';
+            if(isset($_SESSION['delete'])) {
+                $supression = 'La fiche a bien été supprimée.';
+                unset($_SESSION['delete']);
+            }
 
             $fiches = fiche::findAllByUserId($_SESSION['usr_connexion']['usr_id']);
             $fichesLike = fiche::findAllLike();
@@ -126,15 +132,15 @@
                     "f_media" => $_POST['media'],
                     "f_usr_id" => $_SESSION['usr_connexion']['usr_id']
                 ]);
-
+            
                 redirectTo('userhome');
 
                 } else {
                 // affichage des erreurs 
                 $errors =  $NewCard->displayErrors();
             }
-    
-            view('user.userHome', compact('formulaireHtml', 'errors', 'formValid', 'fiches'));
+            
+            view('user.userHome', compact('formulaireHtml', 'errors', 'formValid', 'fiches', 'supression'));
         }
 
     }

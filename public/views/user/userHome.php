@@ -7,7 +7,10 @@ ob_start(); ?>
     
     <?php if(isset($fiches)): ?>
     <h2>Vous pouvez gérer vos publications</h2>
-    <div class="row">
+    <?php if(isset($supression)): ?>
+                    <h5 style="color:red;"><?= $supression; ?></5>
+                    <?php endif; ?>
+    <div style="margin-top: 20px;" class="row">
         <?php foreach($fiches as $fiche): ?>
             <div class="col-12 col-md-6 col-lg-2 ficheUser">
                     <div class="text">
@@ -15,8 +18,9 @@ ob_start(); ?>
                         <p><?= $fiche['cat_name'] ?></p>
                         <p><?= $fiche['f_date'] ?></p>
                         <a class="lien" href="<?= url('fiche/'.$fiche['f_id']) ?>">Aperçu</a>
-                        <a class="lien" href="<?= url('fiche/delete'.$fiche['f_id']) ?>">Supprimer</a>
+                        <a class="lien" href="<?= url('fiche/delete/'.$fiche['f_id']) ?>">Supprimer</a>
                     </div>
+                    
             </div>
         <?php endforeach; ?>
     </div>

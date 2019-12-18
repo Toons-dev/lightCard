@@ -51,7 +51,7 @@ class Fiche extends Db {
 
         Db::dbDelete(self::TABLE_NAME, [self::PRIMARY_KEY => $id ]);
         
-        return;
+        return 'La fiche a été supprimée';
     }
 
     public static function findAll() {
